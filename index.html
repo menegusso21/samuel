@@ -3,85 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inovações Sustentáveis no Agro</title>
+    <title>AgroInova | Tecnologia e Sustentabilidade</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Ícones (FontAwesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1>AgroTech Sustentável</h1>
-            <nav>
+    <!-- Navegação -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Agro<span>Inova</span> <i class="fa-solid fa-leaf"></i></a>
+            <nav class="nav-menu">
                 <ul>
-                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#home">Início</a></li>
                     <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#sobre">Missão</a></li>
+                    <li><a href="#contato" class="btn-nav">Contato</a></li>
                 </ul>
             </nav>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
 
-    <section id="sobre" class="hero">
-        <div class="container">
-            <h2>Tecnologia e Sustentabilidade de Mãos Dadas</h2>
-            <p>Conheça nossas soluções inovadoras que unem a força do agronegócio com a preservação do meio ambiente, desde pequenos espaços urbanos até grandes plantações.</p>
-            <a href="#projetos" class="btn">Ver Projetos</a>
+    <!-- Seção Hero -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>O Futuro da Agricultura é <span class="highlight">Inteligente</span> e <span class="highlight">Sustentável</span></h1>
+            <p>Conectando tecnologia, meio ambiente e produtores rurais para construir um agro mais forte, justo e preservacionista.</p>
+            <a href="#projetos" class="btn-primary">Conheça Nossas Soluções</a>
         </div>
     </section>
 
-    <section id="projetos" class="projetos">
+    <!-- Seção de Projetos -->
+    <section id="projetos" class="projects">
         <div class="container">
-            <h2 class="section-title">Nossos Projetos</h2>
-            <div class="cards-grid">
+            <h2 class="section-title">Nossas Inovações</h2>
+            <p class="section-subtitle">Soluções práticas para os desafios do campo e da cidade.</p>
+            
+            <div class="projects-grid">
                 
-                <div class="card">
-                    <div class="card-icon">🌱</div>
+                <!-- Projeto 1 -->
+                <article class="project-card">
+                    <div class="card-icon"><i class="fa-solid fa-seedling"></i></div>
                     <h3>Horta Vertical Inteligente</h3>
-                    <h4>Foco Urbano e Escolar</h4>
-                    <p>Criação de um sistema de cultivo automatizado para pequenos espaços, mostrando que a produção de alimentos pode estar em qualquer lugar.</p>
-                    <ul>
-                        <li>Uso de sensores de umidade e irrigação automática (como Arduino) para economizar água.</li>
-                        <li>Uso de materiais reciclados (garrafas PET, paletes) e adubagem orgânica via compostagem.</li>
-                        <li>Produção local que reduz a emissão de CO2 com o transporte de alimentos.</li>
+                    <span class="tag">Foco Urbano / Escolar</span>
+                    <p>Sistema de cultivo automatizado para pequenos espaços, provando que a produção de alimentos pode estar em qualquer lugar.</p>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Sensores de umidade e irrigação automática (Arduino) para economia de água.</li>
+                        <li><i class="fa-solid fa-check"></i> Uso de materiais reciclados (garrafas PET, paletes) e compostagem orgânica.</li>
+                        <li><i class="fa-solid fa-check"></i> Produção local que reduz a emissão de CO2 no transporte.</li>
                     </ul>
-                    <button class="btn-saibamais">Saiba Mais</button>
-                </div>
+                </article>
 
-                <div class="card">
-                    <div class="card-icon">🚁</div>
+                <!-- Projeto 2 -->
+                <article class="project-card">
+                    <div class="card-icon"><i class="fa-solid fa-helicopter"></i></div>
                     <h3>Drone Protetor da Biodiversidade</h3>
-                    <h4>Foco Tecnológico</h4>
-                    <p>Simulação e protótipo de um drone que ajuda o agricultor a cuidar da plantação sem agredir a mata nativa.</p>
-                    <ul>
-                        <li>Programação para identificar áreas que precisam de água ou nutrientes usando sensores.</li>
-                        <li>Evita o desperdício de recursos e o uso excessivo de defensivos agrícolas químicos.</li>
-                        <li>Monitoramento de pragas de forma precisa, preservando os insetos polinizadores (abelhas).</li>
+                    <span class="tag">Foco Tecnológico</span>
+                    <p>Protótipo de drone que auxilia o agricultor a cuidar da plantação com precisão, sem agredir a mata nativa.</p>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Sensores que identificam áreas exatas que precisam de água ou nutrientes.</li>
+                        <li><i class="fa-solid fa-check"></i> Redução drástica do desperdício de recursos e defensivos químicos.</li>
+                        <li><i class="fa-solid fa-check"></i> Monitoramento de pragas preservando insetos polinizadores (abelhas).</li>
                     </ul>
-                    <button class="btn-saibamais">Saiba Mais</button>
-                </div>
+                </article>
 
-                <div class="card">
-                    <div class="card-icon">📱</div>
+                <!-- Projeto 3 -->
+                <article class="project-card">
+                    <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
                     <h3>App "Do Campo à Mesa"</h3>
-                    <h4>Foco Digital</h4>
-                    <p>Desenvolvimento de um App que conecta pequenos produtores sustentáveis diretamente aos consumidores.</p>
-                    <ul>
-                        <li>Plataforma digital com geolocalização e histórico de produção (rastreabilidade).</li>
-                        <li>Apoio à agricultura familiar e incentivo ao consumo de produtos da estação e orgânicos.</li>
-                        <li>Garante que o produtor tenha lucro (Agro forte) enquanto promove práticas que respeitam o solo.</li>
+                    <span class="tag">Foco Digital</span>
+                    <p>Plataforma que conecta pequenos produtores sustentáveis diretamente aos consumidores finais.</p>
+                    <ul class="features">
+                        <li><i class="fa-solid fa-check"></i> Geolocalização e histórico de produção (rastreabilidade total).</li>
+                        <li><i class="fa-solid fa-check"></i> Incentivo ao consumo de produtos da estação e orgânicos.</li>
+                        <li><i class="fa-solid fa-check"></i> Garantia de lucro justo ao produtor (Agro Forte) e respeito ao solo.</li>
                     </ul>
-                    <button class="btn-saibamais">Saiba Mais</button>
-                </div>
+                </article>
 
             </div>
         </div>
     </section>
 
-    <footer id="contato">
-        <div class="container">
-            <p>&copy; 2026 AgroTech Sustentável. Todos os direitos reservados.</p>
-            <p>Criando um futuro mais verde e tecnológico.</p>
+    <!-- Seção Sobre / Missão -->
+    <section id="sobre" class="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2>Por que isso importa?</h2>
+                <p>Acreditamos que a tecnologia não deve ser inimiga da natureza, mas sua maior aliada. Nossos projetos são alinhados com os Objetivos de Desenvolvimento Sustentável (ODS) da ONU, focando em:</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h4>02</h4>
+                        <p>Fome Zero e Agricultura Sustentável</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>09</h4>
+                        <p>Indústria, Inovação e Infraestrutura</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>12</h4>
+                        <p>Consumo e Produção Responsáveis</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=1000&auto=format&fit=crop" alt="Agricultura sustentável e tecnologia">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato" class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <h3>Agro<span>Inova</span></h3>
+                <p>Tecnologia a serviço da vida.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="https://github.com" target="_blank">Repositório GitHub</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Siga-nos</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 AgroInova. Desenvolvido para fins educacionais e de inovação.</p>
         </div>
     </footer>
 

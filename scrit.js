@@ -1,27 +1,29 @@
-// Rolagem suave para os links do menu
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    const navLinks = document.querySelectorAll('.nav-menu a');
 
-        const targetId = this.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
-
-        if (targetSection) {
-            targetSection.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+    // Abrir/Fechar Menu Mobile
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
-});
 
-// Ação para os botões "Saiba Mais" nos cartões
-const botoesSaibaMais = document.querySelectorAll('.btn-saibamais');
+    // Fechar o menu ao clicar em um link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
 
-botoesSaibaMais.forEach(botao => {
-    botao.addEventListener('click', () => {
-        // Pega o título do projeto correspondente ao botão clicado
-        const tituloProjeto = botao.parentElement.querySelector('h3').innerText;
-        alert(`Você demonstrou interesse no projeto: ${tituloProjeto}!\nEm breve teremos uma página detalhada para ele.`);
+    // Efeito de sombra no header ao rolar a página
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (window.scrollY > 50) {
+            header.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.2)";
+        } else {
+            header.style.boxShadow = "0 4px 6px rgba(0, 0, 0, 0.1)";
+        }
     });
 });
